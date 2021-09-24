@@ -1,0 +1,39 @@
+# NUCLEO-64 F401RE board configuration
+
+# Copyright (c) 2016 Linaro Limited.
+# Copyright (c) 2019 Centaur Analytics, Inc
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_STM32F401RB_DISCO
+
+# Always set CONFIG_BOARD here. This isn't meant to be customized,
+# but is set as a "default" due to Kconfig language restrictions.
+config BOARD
+	default "STM32F401RB_DISCO"
+
+# Other options you want enabled by default go next.
+
+config SPI_STM32_INTERRUPT
+	default y
+	depends on SPI
+
+config DMA_STM32
+    bool
+    default y
+    depends on DMA && SOC_FAMILY_STM32
+
+config SERIAL
+    bool
+    default y
+
+config SERIAL_SUPPORT_ASYNC
+    bool
+    default y
+    depends on SERIAL
+
+config UART_ASYNC_API
+    bool
+    default y
+    
+
+endif # BOARD_STM32F401RB_DISCO

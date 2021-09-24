@@ -1,0 +1,8 @@
+# STM32F401RB_DISCO board configuration
+
+# Copyright (c) 2016 Linaro Limited.
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_STM32F401RB_DISCO
+	bool "STM32 F401RB Development Board"
+	depends on SOC_STM32F401Xb

@@ -1,0 +1,19 @@
+identifier: stm32f401rb_disco
+name: ST Disco F401RB
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+supported:
+  - pwm
+  - counter
+  - uart
+  - gpio
+  - i2c
+  - spi
+  - adc
+  - watchdog
+ram: 64
+flash: 128
